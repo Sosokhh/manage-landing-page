@@ -578,14 +578,6 @@ video {
   right: 1.5rem;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
-.m-5 {
-  margin: 1.25rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -613,6 +605,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -623,18 +619,6 @@ video {
 
 .mt-32 {
   margin-top: 8rem;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.mr-3 {
-  margin-right: 0.75rem;
 }
 
 .block {
@@ -697,14 +681,6 @@ video {
   justify-content: space-around;
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-10 {
   gap: 2.5rem;
 }
@@ -719,12 +695,6 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-32 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(8rem * var(--tw-space-x-reverse));
-  margin-left: calc(8rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -767,30 +737,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-y-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-9 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
-}
-
-.space-y-7 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
-}
-
-.space-x-28 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(7rem * var(--tw-space-x-reverse));
-  margin-left: calc(7rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-end {
@@ -868,19 +814,9 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-9 {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
 }
 
 .pt-2 {
@@ -981,7 +917,7 @@ body {
   position: relative;
 }
 
-.hamburger-top, .hamburger-middle, .hamburger-bottom {
+.hamburger-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -993,28 +929,41 @@ body {
 }
 
 .hamburger-middle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
   transform: translateY(7px);
 }
 
 .hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
   transform: translateY(14px);
 }
 
 .open {
   transform: rotate(90deg);
   transform: translateY(0px);
-}
-
-.open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translate(6px);
-}
-
-.open .hamburger-middle {
-  display: none;
-}
-
-.open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translate(-6px);
+  .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+  .hamburger-middle {
+    display: none;
+  }
+  .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
 }
 
 .hover\:bg-brightRedLight:hover {
@@ -1025,11 +974,6 @@ body {
 .hover\:bg-gray-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .hover\:text-brightRed:hover {
@@ -1062,10 +1006,6 @@ body {
     margin-bottom: 1rem;
   }
 
-  .md\:mr-3 {
-    margin-right: 0.75rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -1092,10 +1032,6 @@ body {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-row-reverse {
-    flex-direction: row-reverse;
   }
 
   .md\:flex-col-reverse {
@@ -1130,26 +1066,9 @@ body {
     background-color: transparent;
   }
 
-  .md\:p-11 {
-    padding: 2.75rem;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .md\:p-9 {
-    padding: 2.25rem;
-  }
-
   .md\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-  }
-
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 
   .md\:text-left {
